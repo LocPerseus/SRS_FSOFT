@@ -26,13 +26,16 @@
             <a href="index.html" class="nav-link active">Dashboard</a>
           </li>
           <li class="nav-item px-2">
-            <a href="books.html" class="nav-link">Books</a>
+            <a href="headbook.html" class="nav-link">Head Book</a>
           </li>
           <li class="nav-item px-2">
             <a href="categories.html" class="nav-link">Categories</a>
           </li>
           <li class="nav-item px-2">
             <a href="users.html" class="nav-link">Users</a>
+          </li>
+          <li class="nav-item px-2">
+            <a href="card.html" class="nav-link">Card Management</a>
           </li>
         </ul>
 
@@ -101,130 +104,6 @@
     <div class="container">
       <div class="row">
         <div class="col-md-9">
-          <div class="card">
-            <div class="card-header">
-              <h4>Latest Books</h4>
-            </div>
-            <table class="table table-striped">
-              <thead class="thead-dark">
-                <tr>
-                  <th>#</th>
-                  <th>Title</th>
-                  <th>Category</th>
-                  <th>Date</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Book One</td>
-                  <td>Web Development</td>
-                  <td>May 10 2018</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Book Two</td>
-                  <td>Tech Gadgets</td>
-                  <td>May 11 2018</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Book Three</td>
-                  <td>Web Development</td>
-                  <td>May 13 2018</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Book Four</td>
-                  <td>Business</td>
-                  <td>May 15 2018</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Book Five</td>
-                  <td>Web Development</td>
-                  <td>May 17 2018</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Book Six</td>
-                  <td>Health & Wellness</td>
-                  <td>May 20 2018</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- PAGINATION -->
-            <nav class="ml-4">
-              <ul class="pagination">
-                <li class="page-item disabled">
-                  <a href="#" class="page-link">Previous</a>
-                </li>
-                <li class="page-item active">
-                  <a href="#" class="page-link">1</a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link">2</a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link">3</a>
-                </li>
-                <li class="page-item">
-                  <a href="#" class="page-link">Next</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="col-md-3">
           <div class="card text-center bg-primary text-white mb-3">
             <div class="card-body">
               <h3>Books</h3>
@@ -291,16 +170,40 @@
           <form>
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" value="Post One">
             </div>
             <div class="form-group">
               <label for="category">Category</label>
               <select class="form-control">
-                <option value="">Web Development</option>
+                <option value="" selected>Web Development</option>
                 <option value="">Tech Gadgets</option>
                 <option value="">Business</option>
                 <option value="">Health & Wellness</option>
               </select>
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="language">Language</label>
+              <input type="text" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="publisher">Publisher</label>
+              <input type="text" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="remainquantity">Remain Quantity</label>
+              <input type="number" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="price">Price</label>
+              <input type="number" class="form-control" value="Post One">
             </div>
             <div class="form-group">
               <label for="image">Upload Image</label>
@@ -311,8 +214,8 @@
               <small class="form-text text-muted">Max Size 3mb</small>
             </div>
             <div class="form-group">
-              <label for="body">Body</label>
-              <textarea name="editor1" class="form-control"></textarea>
+              <label for="body">Description</label>
+              <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
             </div>
           </form>
         </div>
@@ -337,7 +240,11 @@
           <form>
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="body">Description</label>
+              <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
             </div>
           </form>
         </div>
