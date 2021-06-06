@@ -76,7 +76,7 @@
                                             <span>|</span>
                                             <div class="header-cart dropdown">
                                                 <a class="dropdown-toggle" href="user-information.html">
-                                                    <i class="fa fa-shopping-cart"></i>&nbsp;Borrowed books
+                                                    <i class="fa fa-book"></i>&nbsp;Borrowed books
                                                 </a>
                                             </div>
                                         </div>
@@ -88,6 +88,10 @@
                                     <li class="dropdown active">
                                         <a data-toggle="dropdown" class="dropdown-toggle disabled"
                                             href="index.html">Home</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a data-toggle="dropdown" class="dropdown-toggle disabled"
+                                            href="user-information.html">History Borrow</a>
 
                                     </li>
                                 </ul>
@@ -192,21 +196,12 @@
                                 <div class="filter-options margin-list">
                                     <div class="row">
                                         <div class="col-md-4 col-sm-4">
-                                            <select name="orderby">
-                                                <option selected="selected">Default sorting</option>
-                                                <option>Sort by popularity</option>
-                                                <option>Sort by rating</option>
-                                                <option>Sort by newness</option>
-                                                <option>Sort by price</option>
-                                            </select>
                                         </div>
                                         <div class="col-md-4 col-sm-4">
                                             <div class="filter-result">Showing items 1 to 9 of 19 total</div>
                                         </div>
                                         <div class="col-md-3 col-sm-3 pull-right">
                                             <div class="filter-toggle">
-                                                <a href="books-media-gird-view-v1.html"><i
-                                                        class="glyphicon glyphicon-th-large"></i></a>
                                                 <a href="books-media-list-view.html" class="active"><i
                                                         class="glyphicon glyphicon-th-list"></i></a>
                                             </div>
@@ -236,40 +231,6 @@
                                                                     class="fa fa-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -284,18 +245,7 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -307,8 +257,10 @@
                                                         slightly believable.</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray"
-                                                        href="books-media-detail-v1.html">Borrow Book</a>
+                                                    <button type="button" class="btn btn-dark-gray" data-toggle="modal"
+                                                        data-target="#borrowBookModal">
+                                                        Borrow Book
+                                                    </button>
                                                 </footer>
                                             </div>
                                             <div class="clear"></div>
@@ -336,40 +288,7 @@
                                                                     class="fa fa-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
+
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -383,18 +302,7 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -406,8 +314,10 @@
                                                         slightly believable.</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray"
-                                                        href="books-media-detail-v1.html">Borrow Book</a>
+                                                    <button type="button" class="btn btn-dark-gray" data-toggle="modal"
+                                                        data-target="#borrowBookModal">
+                                                        Borrow Book
+                                                    </button>
                                                 </footer>
                                             </div>
                                         </div>
@@ -434,40 +344,6 @@
                                                                     class="fa fa-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -481,18 +357,7 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -532,40 +397,6 @@
                                                                     class="fa fa-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -579,18 +410,7 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -602,8 +422,10 @@
                                                         slightly believable.</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray"
-                                                        href="books-media-detail-v1.html">Borrow Book</a>
+                                                    <button type="button" class="btn btn-dark-gray" data-toggle="modal"
+                                                        data-target="#borrowBookModal">
+                                                        Borrow Book
+                                                    </button>
                                                 </footer>
                                             </div>
                                         </div>
@@ -630,40 +452,6 @@
                                                                     class="fa fa-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -677,18 +465,7 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -700,8 +477,10 @@
                                                         slightly believable.</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray"
-                                                        href="books-media-detail-v1.html">Borrow Book</a>
+                                                    <button type="button" class="btn btn-dark-gray" data-toggle="modal"
+                                                        data-target="#borrowBookModal">
+                                                        Borrow Book
+                                                    </button>
                                                 </footer>
                                             </div>
                                         </div>
@@ -728,40 +507,6 @@
                                                                     class="fa fa-linkedin"></i></a></li>
                                                     </ul>
                                                 </div>
-                                                <div class="optional-links">
-                                                    <ul>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Add TO CART">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Like">
-                                                                <i class="fa fa-heart"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Mail"><i
-                                                                    class="fa fa-envelope"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Search">
-                                                                <i class="fa fa-search"></i>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#" target="_blank" data-toggle="blog-tags"
-                                                                data-placement="top" title="Print">
-                                                                <i class="fa fa-print"></i>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
                                                 <header class="entry-header">
                                                     <div class="row">
                                                         <div class="col-sm-6">
@@ -775,18 +520,7 @@
                                                         </div>
                                                         <div class="col-sm-6">
                                                             <ul>
-                                                                <li><strong>Edition:</strong> First editio</li>
                                                                 <li><strong>Local Availability:</strong> 0 (of 1)</li>
-                                                                <li>
-                                                                    <div class="rating">
-                                                                        <strong>Rating: </strong>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                        <span>☆</span>
-                                                                    </div>
-                                                                </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -798,8 +532,10 @@
                                                         slightly believable.</p>
                                                 </div>
                                                 <footer class="entry-footer">
-                                                    <a class="btn btn-dark-gray"
-                                                        href="books-media-detail-v1.html">Borrow Book</a>
+                                                    <button type="button" class="btn btn-dark-gray" data-toggle="modal"
+                                                        data-target="#borrowBookModal">
+                                                        Borrow Book
+                                                    </button>
                                                 </footer>
                                             </div>
                                         </div>
@@ -828,61 +564,61 @@
     </div>
     <!-- End: Books & Media Section -->
 
-        <!-- Start: Social Network -->
-        <section class="social-network section-padding">
-            <div class="container">
-                <div class="center-content">
-                    <h2 class="section-title">Follow Us</h2>
-                    <span class="underline center"></span>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-                <ul>
-                    <li>
-                        <a class="facebook" href="#" target="_blank">
-                            <span>
-                                <i class="fa fa-facebook-f"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="twitter" href="#" target="_blank">
-                            <span>
-                                <i class="fa fa-twitter"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="google" href="#" target="_blank">
-                            <span>
-                                <i class="fa fa-google-plus"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="rss" href="#" target="_blank">
-                            <span>
-                                <i class="fa fa-rss"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="linkedin" href="#" target="_blank">
-                            <span>
-                                <i class="fa fa-linkedin"></i>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="youtube" href="#" target="_blank">
-                            <span>
-                                <i class="fa fa-youtube"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
+    <!-- Start: Social Network -->
+    <section class="social-network section-padding">
+        <div class="container">
+            <div class="center-content">
+                <h2 class="section-title">Follow Us</h2>
+                <span class="underline center"></span>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-        </section>
-        <!-- End: Social Network -->
+            <ul>
+                <li>
+                    <a class="facebook" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-facebook-f"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="twitter" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-twitter"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="google" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-google-plus"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="rss" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-rss"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="linkedin" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-linkedin"></i>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a class="youtube" href="#" target="_blank">
+                        <span>
+                            <i class="fa fa-youtube"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- End: Social Network -->
     <!-- Start: Footer -->
     <footer class="site-footer">
         <div class="sub-footer">
@@ -897,6 +633,89 @@
     </footer>
     <!-- End: Footer -->
 
+    <!-- Modal -->
+    <div class="modal fade" id="borrowBookModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="post-detail">
+                        <header class="entry-header">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <img src="images/books-media/list-view/book-media-01.jpg" alt="cart item" />
+                                </div>
+                                <div class="col-sm-6">
+                                    <h3 class="entry-title">
+                                        <a href="books-media-detail-v1.html">The Great
+                                            Gatsby</a>
+                                    </h3>
+                                    <ul>
+                                        <li><strong>Author:</strong> F. Scott Fitzgerald</li>
+                                        <li><strong>Local Availability:</strong> 90 (of 100)</li>
+                                    </ul>
+                                </div>
+                                <!-- <div class="col-sm-4">
+                                    <div class="form-group bg-dark text-center">
+                                        <input class="form-control" value="2021-06-06" type="number"
+                                            name="size">
+                                    </div>
+                                </div> -->
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="form">
+                                    <div class="col-sm-6">
+                                        <div class="form-group bg-dark text-center">
+                                            <h2>Return Date</h2>
+                                            <span class="underline left"></span>
+                                            <input class="form-control" value="2021-06-06" type="date" id="birthday"
+                                                name="birthday">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group bg-dark text-center">
+                                            <h2>Quantity</h2>
+                                            <span class="underline left"></span>
+                                            <input class="form-control" value="1" type="number" name="size">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-sm-4">
+                                        <div class="form-group bg-dark text-center">
+                                            <input class="form-control" value="2021-06-06" type="number"
+                                                name="size">
+                                        </div>
+                                    </div> -->
+                                </div>
+
+                            </div>
+                        </header>
+                        <footer class="modal-footer">
+                            <button type="button" class="btn btn-dark-gray" data-toggle="modal" data-dismiss="modal"
+                                data-target="#saveChanges">
+                                Borrow
+                            </button>
+                            <button type="button" class="btn btn-dark-gray" data-dismiss="modal">
+                                Cancel
+                            </button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="saveChanges">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-body">
+                <h5 class="modal-title">Borrow Book Successfully!</h5>
+              </div>
+           
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- jQuery Latest Version 1.x -->
     <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
 
