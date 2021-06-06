@@ -117,7 +117,10 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
+                  <th>Date Of Birth</th>
+                  <th>Phone</th>
                   <th>Email</th>
+                  <th>Address</th>
                   <th>User Type</th>
                   <th>Status</th>
                   <th></th>
@@ -127,7 +130,10 @@
                 <tr>
                   <td>1</td>
                   <td>John Doe</td>
+                  <td>01/01/2000</td>
+                  <td>0905558541</td>
                   <td>jdoe@gmail.com</td>
+                  <td>Đà Nẵng</td>
                   <td>
                     <select class="badge bg-info">
                       <option value="" selected>Student</option>
@@ -146,7 +152,10 @@
                 <tr>
                   <td>2</td>
                   <td>Harry White</td>
+                  <td>01/01/1995</td>
+                  <td>0905567789</td>
                   <td>harry@yahoo.com</td>
+                  <td>Đà Nẵng</td>
                   <td>
                     <select class="badge bg-info">
                       <option value="" selected>Student</option>
@@ -157,6 +166,9 @@
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
+                    <a href="#" class="btn btn-warning">
+                      <i class="fa fa-edit"></i>
+                    </a>
                     <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
@@ -165,7 +177,10 @@
                 <tr>
                   <td>3</td>
                   <td>Mary Johnson</td>
+                  <td>01/01/2002</td>
+                  <td>0905225458</td>
                   <td>mary@gmail.com</td>
+                  <td>Đà Nẵng</td>
                   <td>
                     <select class="badge bg-info">
                       <option value="" selected>Student</option>
@@ -237,12 +252,8 @@
           <div class="modal-body">
             <form>
               <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">User</label>
                 <input type="text" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control">
               </div>
               <div class="form-group">
                 <label for="password">Password</label>
@@ -252,10 +263,18 @@
                 <label for="password2">Confirm Password</label>
                 <input type="password" class="form-control">
               </div>
+              <div class="form-group">
+                <label for="password2">Date Of Birth</label>
+                <input class="form-control" value="2021-06-06" type="date" id="birthday" name="birthday">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control">
+              </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save Changes</button>
+            <button class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save</button>
           </div>
         </div>
       </div>

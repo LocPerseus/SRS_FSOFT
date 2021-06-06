@@ -77,9 +77,20 @@
   <section id="search" class="py-4 mb-4 bg-light">
     <div class="container">
       <div class="row">
+        <div class="col-md-2">
+          <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addBookModal">
+            <i class="fas fa-plus"></i> Add Book
+          </a>
+        </div>
         <div class="col-md-6 ml-auto">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search Books...">
+            <input type="text" class="form-control" placeholder="Search title book...">
+              <select class="form-control">
+                <option value="" selected>Status</option>
+                <option value="">New</option>
+                <option value="">Normal</option>
+                <option value="">Old</option>
+              </select>
             <div class="input-group-append">
               <button class="btn btn-primary">Search</button>
             </div>
@@ -117,7 +128,10 @@
                     <span class="badge bg-success">New</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                    <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBookModal">
+                      <i class="fa fa-edit"></i>
+                    </a>&nbsp;
+                    <a href="#" class="btn btn-danger">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -130,7 +144,11 @@
                     <span class="badge bg-success">New</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                    <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBookModal">
+                      <i class="fa fa-edit"></i>
+                    </a>&nbsp;
+                    <a href="#" class="btn btn-danger">
+
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -143,7 +161,11 @@
                     <span class="badge bg-success">New</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                    <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBookModal">
+                      <i class="fa fa-edit"></i>
+                    </a>&nbsp;
+                    <a href="#" class="btn btn-danger">
+
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -156,7 +178,11 @@
                     <span class="badge bg-success">New</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                    <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBookModal">
+                      <i class="fa fa-edit"></i>
+                    </a>&nbsp;
+                    <a href="#" class="btn btn-danger">
+
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -169,6 +195,9 @@
                     <span class="badge bg-danger">Old</span>
                   </td>
                   <td>
+                    <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#editBookModal">
+                      <i class="fa fa-edit"></i>
+                    </a>&nbsp;
                     <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
@@ -217,21 +246,91 @@
       </div>
     </div>
   </footer>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+  <!-- ADD POST MODAL -->
+  <div class="modal fade" id="addBookModal">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Add Book</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
         <div class="modal-body">
-          CONFIRM DELETE
+          <form>
+            <div class="form-group">
+              <label for="category">Head Book</label>
+              <select class="form-control">
+                <option value="" selected>Chọn</option>
+                <option value="">Lập trình .Net</option>
+                <option value="">Tôi thấy hoa vàng trên cỏ xanh</option>
+                <option value="">Mắt biếc</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="category">Status</label>
+              <select class="form-control">
+                <option value="" selected>Chọn</option>
+                <option value="">New</option>
+                <option value="">Normal</option>
+                <option value="">Old</option>
+              </select>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-          <button type="button" class="btn btn-primary">YES</button>
+          <button class="btn btn-primary" data-dismiss="modal">Save</button>
         </div>
       </div>
     </div>
   </div>
+  <!--  -->
+  <!-- EDIT POST MODAL -->
+  <div class="modal fade" id="editBookModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title">Edit Book</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="language">Head Book</label>
+              <input type="text" class="form-control" value="Book One">
+            </div>
+            <div class="form-group">
+              <label for="category">Status</label>
+              <select class="form-control">
+                <option value="" selected>Chọn</option>
+                <option value="">New</option>
+                <option value="">Normal</option>
+                <option value="">Old</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-dismiss="modal">Save</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                CONFIRM DELETE
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary">YES</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
