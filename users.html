@@ -26,7 +26,7 @@
             <a href="index.html" class="nav-link">Dashboard</a>
           </li>
           <li class="nav-item px-2">
-            <a href="books.html" class="nav-link">Books</a>
+            <a href="headbook.html" class="nav-link">Head Book</a>
           </li>
           <li class="nav-item px-2">
             <a href="categories.html" class="nav-link">Categories</a>
@@ -82,6 +82,15 @@
             <i class="fas fa-plus"></i> Add User
           </a>
         </div>
+        <div class="col-md-3 ml-auto">
+          <div class="input-group">
+            <select class="form-control">
+              <option value="" selected>Title</option>
+              <option value="">Author</option>
+              <option value="">Category</option>
+            </select>
+          </div>
+        </div>
         <div class="col-md-6 ml-auto">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Users...">
@@ -129,7 +138,7 @@
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -148,7 +157,7 @@
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -167,7 +176,7 @@
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -246,12 +255,38 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-warning" data-dismiss="modal">Save Changes</button>
+            <button class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save Changes</button>
           </div>
         </div>
       </div>
     </div>
-
+  <!-- SAVE CHANGES MODAL -->
+  <div class="modal fade" id="saveChanges">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Save successfully</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        CONFIRM DELETE
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">YES</button>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
