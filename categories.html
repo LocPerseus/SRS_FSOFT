@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Bootstrap Theme</title>
 </head>
@@ -26,7 +26,7 @@
             <a href="index.html" class="nav-link">Dashboard</a>
           </li>
           <li class="nav-item px-2">
-            <a href="books.html" class="nav-link">Books</a>
+            <a href="headbook.html" class="nav-link">Head Book</a>
           </li>
           <li class="nav-item px-2">
             <a href="categories.html" class="nav-link active">Categories</a>
@@ -66,7 +66,8 @@
       <div class="row">
         <div class="col-md-6">
           <h1>
-            <i class="fas fa-folder"></i> Categories</h1>
+            <i class="fas fa-folder"></i> Categories
+          </h1>
         </div>
       </div>
     </div>
@@ -80,6 +81,15 @@
           <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal">
             <i class="fas fa-plus"></i> Add Category
           </a>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <div class="input-group">
+            <select class="form-control">
+              <option value="" selected>Title</option>
+              <option value="">Author</option>
+              <option value="">Category</option>
+            </select>
+          </div>
         </div>
         <div class="col-md-6 ml-auto">
           <div class="input-group">
@@ -120,7 +130,7 @@
                     <a href="detailCategory.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -133,7 +143,7 @@
                     <a href="detailCategory.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -146,7 +156,7 @@
                     <a href="detailCategory.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -159,7 +169,7 @@
                     <a href="detailCategory.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -193,7 +203,7 @@
     </div>
   </section>
 
-  
+
   <!-- FOOTER -->
   <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
     <div class="container">
@@ -209,40 +219,73 @@
     </div>
   </footer>
 
-    <!-- ADD CATEGORY MODAL -->
-    <div class="modal fade" id="addCategoryModal">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header bg-success text-white">
-            <h5 class="modal-title">Add Category</h5>
-            <button class="close" data-dismiss="modal">
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" value="Post One">
-              </div>
-              <div class="form-group">
-                <label for="body">Description</label>
-                <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
-          </div>
+  <!-- ADD CATEGORY MODAL -->
+  <div class="modal fade" id="addCategoryModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Add Category</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="form-control" value="Post One">
+            </div>
+            <div class="form-group">
+              <label for="body">Description</label>
+              <textarea name="editor1"
+                class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save
+            Changes</button>
         </div>
       </div>
     </div>
+  </div>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  <!-- SAVE CHANGES MODAL -->
+  <div class="modal fade" id="saveChanges">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Save successfully</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          CONFIRM DELETE
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+          <button type="button" class="btn btn-primary">YES</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
 
 

@@ -80,6 +80,15 @@
             <i class="fas fa-plus"></i> Add Head Book
           </a>
         </div>
+        <div class="col-md-3 ml-auto">
+          <div class="input-group">
+            <select class="form-control">
+              <option value="" selected>Title</option>
+              <option value="">Author</option>
+              <option value="">Category</option>
+            </select>
+          </div>
+        </div>
         <div class="col-md-6 ml-auto">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Title, author...">
@@ -133,7 +142,27 @@
                     <a href="details.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
+                      <i class="fa fa-trash"></i>
+                    </a>
+                    <a href="books.html" class="btn btn-dark">
+                      <i class="fa fa-rocket"></i> Book
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Book One</td>
+                  <td>Author One</td>
+                  <td>Web Development</td>
+                  <td>500000</td>
+                  <td>100</td>
+                  <td>90</td>
+                  <td>
+                    <a href="details.html" class="btn btn-success" >
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                     <a href="books.html" class="btn btn-dark">
@@ -153,7 +182,7 @@
                     <a href="details.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                     <a href="books.html" class="btn btn-dark">
@@ -173,7 +202,7 @@
                     <a href="details.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                     <a href="books.html" class="btn btn-dark">
@@ -193,27 +222,7 @@
                     <a href="details.html" class="btn btn-success">
                       <i class="fas fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
-                      <i class="fa fa-trash"></i>
-                    </a>
-                    <a href="books.html" class="btn btn-dark">
-                      <i class="fa fa-rocket"></i> Book
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Book One</td>
-                  <td>Author One</td>
-                  <td>Web Development</td>
-                  <td>500000</td>
-                  <td>100</td>
-                  <td>90</td>
-                  <td>
-                    <a href="details.html" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                     <a href="books.html" class="btn btn-dark">
@@ -328,12 +337,41 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary" data-dismiss="modal">Save</button>
+
+          <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save</button>
         </div>
       </div>
     </div>
   </div>
-  
+    <!-- SAVE CHANGES MODAL -->
+    <div class="modal fade" id="saveChanges">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h5 class="modal-title">Save successfully</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        CONFIRM DELETE
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">YES</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
