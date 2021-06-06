@@ -26,7 +26,7 @@
             <a href="index.html" class="nav-link">Dashboard</a>
           </li>
           <li class="nav-item px-2">
-            <a href="books.html" class="nav-link">Books</a>
+            <a href="headbook.html" class="nav-link">Head Book</a>
           </li>
           <li class="nav-item px-2">
             <a href="categories.html" class="nav-link">Categories</a>
@@ -77,6 +77,20 @@
   <section id="search" class="py-4 mb-4 bg-light">
     <div class="container">
       <div class="row">
+        <div class="col-md-2">
+          <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#addUserModal">
+            <i class="fas fa-plus"></i> Add User
+          </a>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <div class="input-group">
+            <select class="form-control">
+              <option value="" selected>Title</option>
+              <option value="">Author</option>
+              <option value="">Category</option>
+            </select>
+          </div>
+        </div>
         <div class="col-md-6 ml-auto">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search Users...">
@@ -103,7 +117,10 @@
                 <tr>
                   <th>#</th>
                   <th>Name</th>
+                  <th>Date Of Birth</th>
+                  <th>Phone</th>
                   <th>Email</th>
+                  <th>Address</th>
                   <th>User Type</th>
                   <th>Status</th>
                   <th></th>
@@ -113,18 +130,21 @@
                 <tr>
                   <td>1</td>
                   <td>John Doe</td>
+                  <td>01/01/2000</td>
+                  <td>0905558541</td>
                   <td>jdoe@gmail.com</td>
+                  <td>Đà Nẵng</td>
                   <td>
-                    <span class="badge bg-danger">Student</span>
+                    <select class="badge bg-info">
+                      <option value="" selected>Student</option>
+                      <option value="">Professor</option>
+                    </select>
                   </td>
                   <td>
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -132,18 +152,24 @@
                 <tr>
                   <td>2</td>
                   <td>Harry White</td>
+                  <td>01/01/1995</td>
+                  <td>0905567789</td>
                   <td>harry@yahoo.com</td>
+                  <td>Đà Nẵng</td>
                   <td>
-                    <span class="badge bg-danger">Student</span>
+                    <select class="badge bg-info">
+                      <option value="" selected>Student</option>
+                      <option value="">Professor</option>
+                    </select>
                   </td>
                   <td>
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
+                    <a href="#" class="btn btn-warning">
+                      <i class="fa fa-edit"></i>
                     </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -151,18 +177,21 @@
                 <tr>
                   <td>3</td>
                   <td>Mary Johnson</td>
+                  <td>01/01/2002</td>
+                  <td>0905225458</td>
                   <td>mary@gmail.com</td>
+                  <td>Đà Nẵng</td>
                   <td>
-                    <span class="badge bg-danger">Student</span>
+                    <select class="badge bg-info">
+                      <option value="" selected>Student</option>
+                      <option value="">Professor</option>
+                    </select>
                   </td>
                   <td>
                     <span class="badge bg-warning">Active</span>
                   </td>
                   <td>
-                    <a href="#" class="btn btn-success">
-                      <i class="fas fa-edit"></i>
-                    </a>
-                    <a href="#" class="btn btn-danger">
+                    <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">
                       <i class="fa fa-trash"></i>
                     </a>
                   </td>
@@ -210,6 +239,73 @@
     </div>
   </footer>
 
+    <!-- ADD USER MODAL -->
+    <div class="modal fade" id="addUserModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title">Add User</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="name">User</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password2">Date Of Birth</label>
+                <input class="form-control" value="2021-06-06" type="date" id="birthday" name="birthday">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- SAVE CHANGES MODAL -->
+  <div class="modal fade" id="saveChanges">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">Save successfully</h5>
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        CONFIRM DELETE
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-primary">YES</button>
+      </div>
+    </div>
+  </div>
+</div>
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"

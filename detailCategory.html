@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Bootstrap Theme</title>
 </head>
@@ -23,19 +23,16 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav">
           <li class="nav-item px-2">
-            <a href="index.html" class="nav-link active">Dashboard</a>
+            <a href="index.html" class="nav-link">Dashboard</a>
           </li>
           <li class="nav-item px-2">
-            <a href="headbook.html" class="nav-link">Head Book</a>
+            <a href="books.html" class="nav-link">Head Book</a>
           </li>
           <li class="nav-item px-2">
             <a href="categories.html" class="nav-link">Categories</a>
           </li>
           <li class="nav-item px-2">
             <a href="users.html" class="nav-link">Users</a>
-          </li>
-          <li class="nav-item px-2">
-            <a href="card.html" class="nav-link">Card Management</a>
           </li>
         </ul>
 
@@ -69,8 +66,7 @@
       <div class="row">
         <div class="col-md-6">
           <h1>
-            <i class="fas fa-cog"></i> Dashboard
-          </h1>
+            Post One</h1>
         </div>
       </div>
     </div>
@@ -81,56 +77,44 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#addBookModal">
-            <i class="fas fa-plus"></i> Add Book
+          <a href="index.html" class="btn btn-light btn-block">
+            <i class="fas fa-arrow-left"></i> Back To Dashboard
           </a>
         </div>
         <div class="col-md-3">
-          <a href="#" class="btn btn-success btn-block" data-toggle="modal" data-target="#addCategoryModal">
-            <i class="fas fa-plus"></i> Add Category
+          <a href="index.html" class="btn btn-success btn-block">
+            <i class="fas fa-check"></i> Save Changes
           </a>
         </div>
         <div class="col-md-3">
-          <a href="#" class="btn btn-warning btn-block" data-toggle="modal" data-target="#addUserModal">
-            <i class="fas fa-plus"></i> Add User
+          <a href="index.html" class="btn btn-danger btn-block">
+            <i class="fas fa-trash"></i> Delete Post
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- POSTS -->
-  <section id="books">
+  <!-- DETAILS -->
+  <section id="details">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
-          <div class="card text-center bg-primary text-white mb-3">
-            <div class="card-body">
-              <h3>Books</h3>
-              <h4 class="display-4">
-                <i class="fas fa-pencil-alt"></i> 6
-              </h4>
-              <a href="books.html" class="btn btn-outline-light btn-sm">View</a>
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <h4>Edit Post</h4>
             </div>
-          </div>
-
-          <div class="card text-center bg-success text-white mb-3">
             <div class="card-body">
-              <h3>Categories</h3>
-              <h4 class="display-4">
-                <i class="fas fa-folder"></i> 4
-              </h4>
-              <a href="categories.html" class="btn btn-outline-light btn-sm">View</a>
-            </div>
-          </div>
-
-          <div class="card text-center bg-warning text-white mb-3">
-            <div class="card-body">
-              <h3>Users</h3>
-              <h4 class="display-4">
-                <i class="fas fa-users"></i> 4
-              </h4>
-              <a href="users.html" class="btn btn-outline-light btn-sm">View</a>
+              <form>
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" value="Post One">
+                </div>
+                <div class="form-group">
+                  <label for="body">Description</label>
+                  <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -157,11 +141,11 @@
   <!-- MODALS -->
 
   <!-- ADD POST MODAL -->
-  <div class="modal fade" id="addBookModal">
+  <div class="modal fade" id="addPostModal">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title">Add Book</h5>
+          <h5 class="modal-title">Add Post</h5>
           <button class="close" data-dismiss="modal">
             <span>&times;</span>
           </button>
@@ -170,40 +154,16 @@
           <form>
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control" value="Post One">
+              <input type="text" class="form-control">
             </div>
             <div class="form-group">
               <label for="category">Category</label>
               <select class="form-control">
-                <option value="" selected>Web Development</option>
+                <option value="">Web Development</option>
                 <option value="">Tech Gadgets</option>
                 <option value="">Business</option>
                 <option value="">Health & Wellness</option>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="author">Author</label>
-              <input type="text" class="form-control" value="Post One">
-            </div>
-            <div class="form-group">
-              <label for="language">Language</label>
-              <input type="text" class="form-control" value="Post One">
-            </div>
-            <div class="form-group">
-              <label for="publisher">Publisher</label>
-              <input type="text" class="form-control" value="Post One">
-            </div>
-            <div class="form-group">
-              <label for="quantity">Quantity</label>
-              <input type="number" class="form-control" value="Post One">
-            </div>
-            <div class="form-group">
-              <label for="remainquantity">Remain Quantity</label>
-              <input type="number" class="form-control" value="Post One">
-            </div>
-            <div class="form-group">
-              <label for="price">Price</label>
-              <input type="number" class="form-control" value="Post One">
             </div>
             <div class="form-group">
               <label for="image">Upload Image</label>
@@ -214,13 +174,13 @@
               <small class="form-text text-muted">Max Size 3mb</small>
             </div>
             <div class="form-group">
-              <label for="body">Description</label>
-              <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+              <label for="body">Body</label>
+              <textarea name="editor1" class="form-control"></textarea>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-primary toastsDefaultSuccess" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save Changes</button>
+          <button class="btn btn-primary" data-dismiss="modal">Save Changes</button>
         </div>
       </div>
     </div>
@@ -240,16 +200,12 @@
           <form>
             <div class="form-group">
               <label for="title">Title</label>
-              <input type="text" class="form-control" value="Post One">
-            </div>
-            <div class="form-group">
-              <label for="body">Description</label>
-              <textarea name="editor1" class="form-control">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat culpa nam cumque voluptatum. Possimus recusandae porro architecto officiis illo dignissimos ratione aut officia reprehenderit! Iure cum numquam fugit doloremque quis ullam illo odit, odio voluptates non quisquam laboriosam consectetur quasi perspiciatis! Sapiente minus aperiam nobis molestias autem ut praesentium laudantium?</textarea>
+              <input type="text" class="form-control">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#saveChanges">Save Changes</button>
+          <button class="btn btn-success" data-dismiss="modal">Save Changes</button>
         </div>
       </div>
     </div>
@@ -291,7 +247,6 @@
       </div>
     </div>
   </div>
-
   <!-- SAVE CHANGES MODAL -->
   <div class="modal fade" id="saveChanges">
     <div class="modal-dialog modal-lg">
@@ -306,13 +261,11 @@
     </div>
   </div>
 
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 
